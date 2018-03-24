@@ -9,7 +9,11 @@ export default class Host {
      */
     run() {
         if (this.shouldRunForPage(location.pathname)) {
-            this.getComments();
+            const comments = this.getComments();
+            console.log(comments.length);
+            for (const comment of comments) {
+                // let checkHate = new RequestHateValue();
+            }
         }
     }
 
