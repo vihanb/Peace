@@ -8,5 +8,8 @@
     },
     "icons": {
         "32": "icon32.png"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
