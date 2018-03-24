@@ -1,7 +1,7 @@
 import Request, { HTTPMethod } from './Request';
-import HateIndicator from './HateIndicator';
+import HateValue from './HateValue';
 
-export default class RequestHateIndicator extends Request {
+export default class RequestHateValue extends Request {
     constructor(text) {
         super({
             path: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21',
