@@ -1,10 +1,12 @@
-// Injected JavaScript goes nere
-// for this file put extension.js
-function start(){
-	chrome.browserAction.onClicked.addListener(function (tab){
-	// for the current tab, inject the "extension.js" file & execute it
-	chrome.tabs.executeScript(tab.ib, {
-		file: 'extension.js'
-	});
-});
+import RedditRoute from './RedditRoute';
+
+function getRoute() {
+	switch (location.host) {
+		case "www.reddit.com":
+		case "reddit.com": return new RedditRoute();
+
+		default: return null;
+	}
 }
+
+const route = getRoute().run();
