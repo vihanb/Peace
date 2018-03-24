@@ -7,15 +7,29 @@ export default class Host {
     /**
      * Runs the host, assumes document
      */
-    run() {
+    start() {
         if (this.shouldRunForPage(location.pathname)) {
+            this.setupDynamicHooks();
             const comments = this.getComments();
-            console.log(comments.length);
-            for (const comment of comments) {
-                // let checkHate = new RequestHateValue();
-            }
+            this.handleComments(comments);
         }
     }
+
+    /**
+     * Processes comments
+     * @param {Comment[]} comments The comments
+     */
+    handleComments(comments) {
+        for (let i = 0; i < comments.length; i++) {
+
+        }
+    }
+
+    /**
+     * If they are observers, set them up here. Call `this.handleComments` with
+     * a new array of comments
+     */
+    setupDynamicHooks() { return void 0; }
 
     /**
      * Determines of a certain page should be loaded

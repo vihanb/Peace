@@ -14,7 +14,8 @@ export default class RequestHateValue extends Request {
             method: HTTPMethod.GET,
             auth: '71ed1318-4e3d-44e4-8369-1af2ff7011b6:Rv1S0VufTXOF',
             body: qs.stringify({
-                text: text
+                text: text,
+                lang: 'en'
             })
         })
     }
