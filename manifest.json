@@ -7,5 +7,16 @@
 		"persistent": false
 	},
 	"manifest_version": 2,
-	"options_page": "options.html"
+	"options_page": "options.html",
+	"browser action":{
+		"title" : "Peace"
+	},
+	"options_page": "options.html",
+	"permissions": [
+		"background",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"manifest_version": 2
 }
