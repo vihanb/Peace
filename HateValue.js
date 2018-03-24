@@ -18,4 +18,5 @@ class HateValue {
          */
         this.sarcasm = sarcasm;
     }
+	
 }

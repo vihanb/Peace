@@ -8,6 +8,7 @@
 	},
 	"icons": {
 		"32": "icon32.png"
+<<<<<<< HEAD
 	},
 	"manifest_version": 2,
 	"options_page": "options.html",
@@ -15,12 +16,10 @@
 		"title" : "Peace",
 		"default_icon": "icon16.png",
 		"default_popup": "popup.html"
+=======
+>>>>>>> 8e1c9cbe9317923694aa6329158bfd3e84b6c7a1
 	},
-	"options_page": "options.html",
-	"permissions": [
-		"background",
-		"tabs",
-		"http://*/*",
-		"https://*/*"
-	],
+	"manifest_version": 2
+
+	
 }
