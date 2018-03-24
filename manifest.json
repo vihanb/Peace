@@ -3,10 +3,14 @@
 	"version": "1.0",
 	"description": "Remove hateful comments that are sent towards you.",
 	"background":{
-		"scripts": ["background.js"],
+		"scripts": ["extension.js"],
 		"persistent": false
-	}
+	},
 	"manifest_version": 2
+<<<<<<< HEAD
 	"options_page": "options.html",
 
 }
+=======
+}
+>>>>>>> f8aea576c7ff8a6ca5d36e39aa74873f4ec731b7

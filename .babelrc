@@ -1,0 +1,13 @@
+{
+    "presets": [
+      ["babel-preset-env", {
+        "targets": {
+          "browsers": ["last 10 Chrome versions"]
+        }
+      }]
+    ],
+    "plugins": [
+        "babel-plugin-syntax-jsx",
+        "babel-plugin-jsx-to-dom"
+    ]
+}

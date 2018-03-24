@@ -1,0 +1,28 @@
+{
+  "name": "peace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HateIndicator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify main.js -t [ babelify ] -o extension.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vihanb/Peace.git"
+  },
+  "author": "Vihan B <contact@vihan.org> (vihan.org)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vihanb/Peace/issues"
+  },
+  "homepage": "https://github.com/vihanb/Peace#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-jsx-to-dom": "^0.4.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.1"
+  }
+}
