@@ -1,21 +1,24 @@
 {
-	"name": "Peace Extension",
-	"version": "1.0",
-	"manifest_version": 2,
-	"description": "Remove hateful comments that are sent towards you.",
-	"background":{
-		"scripts": ["background.js"],
-		"persistent": false
-	},
-	"content_scripts": [
-		  {
-				"matches": [
-				  "<all_urls>"
-				],
-				"js": ["extension.js"]
-		  }
-	],
-	"icons": {
-		"32": "icon32.png"
-	}
+    "name": "Peace Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Remove hateful comments that are sent towards you.",
+    "background": {
+        "scripts": ["extension.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["extension.js"]
+        }
+    ],
+    "icons": {
+        "32": "icon32.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
