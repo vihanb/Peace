@@ -11,7 +11,7 @@ function start(){
 		}else{
 			objs.push({
 				element: htmlComments[i],
-				text: htmlComments[i].getElementsByClassName("TweetTextSize TweetTextSize--normal js-tweet-text tweet-text")[0].textContent
+				text: htmlComments[i].getElementsByClassName("tweet-text")[0].textContent
 			});
 		}
 	}
