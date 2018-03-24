@@ -1,0 +1,6 @@
+{
+	"name": "Peace Extension",
+	"version": "1.0",
+	"description": "Remove hateful comments that are sent towards you.",
+	"manifest_version": 2
+}
