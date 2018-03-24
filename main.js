@@ -1,7 +1,6 @@
-// Injected JavaScript goes nere
-// for this file put extension.js
+import RedditRoute from './RedditRoute';
 
-function route() {
+function getRoute() {
 	switch (location.host) {
 		case "www.reddit.com":
 		case "reddit.com": return new RedditRoute();
@@ -10,4 +9,4 @@ function route() {
 	}
 }
 
-const route = route.run();
+const route = getRoute().run();
