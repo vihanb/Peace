@@ -57,7 +57,7 @@ export default class Request {
         data,
         contentType,
         headers = {},
-        method = Request.Method.get
+        method = HTTPMethod.GET
     }) {
         this._path = path;
         this._method = method;
