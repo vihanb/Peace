@@ -6,9 +6,22 @@
 		"scripts": ["extension.js"],
 		"persistent": false
 	},
+	"icons": {
+		"128": "icon128.png",
+		"48": "icon48.png",
+		"16": "icon16.png"
+	}
 	"manifest_version": 2,
+<<<<<<< HEAD
 	"browser_action": {
 		"title" : "Peace"
+=======
+	"options_page": "options.html",
+	"browser action":{
+		"title" : "Peace",
+		"default_icon": "icon16.png",
+		"default_popup": "popup.html"
+>>>>>>> 6f5a27e3e75a1be7efa65d17d8b1a0e337f1a9f3
 	},
 	"options_page": "options.html",
 	"permissions": [
