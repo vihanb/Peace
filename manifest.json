@@ -6,7 +6,6 @@
 		"scripts": ["extension.js"],
 		"persistent": false
 	},
-<<<<<<< HEAD
 	"browser action":{
 		"title" : "Peace"
 	},
@@ -17,14 +16,5 @@
 		"http://*/*",
 		"https://*/*"
 	],
-	"manifest_version": 2,
-=======
 	"manifest_version": 2
-<<<<<<< HEAD
-	"options_page": "options.html",
-
->>>>>>> 763dd6d0cfc4e2c2bdbb2e2d582faac56448f6a3
 }
-=======
-}
->>>>>>> f8aea576c7ff8a6ca5d36e39aa74873f4ec731b7
