@@ -6,5 +6,15 @@
 		"scripts": ["extension.js"],
 		"persistent": false
 	},
-	"manifest_version": 2
+	"browser action":{
+		"title" : "Peace"
+	},
+	"options_page": "options.html",
+	"permissions": [
+		"background",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"manifest_version": 2,
 }
