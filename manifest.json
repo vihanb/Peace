@@ -6,6 +6,6 @@
 		"scripts": ["extension.js"],
 		"persistent": false
 	},
-	"manifest_version": 2
-	"options_page": "options.html",
+	"manifest_version": 2,
+	"options_page": "options.html"
 }
