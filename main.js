@@ -1,18 +1,13 @@
 // Injected JavaScript goes nere
 // for this file put extension.js
-function start(){
-	"content_scripts": [
-		  {
-			"matches": [
-			  "<all_urls>"
-			],
-			"js": ["content.js"]
-		  }
-	]
-});
-	checkHatefulDegree(new HateValue({ s }));
+
+function route() {
+	switch (location.host) {
+		case "www.reddit.com":
+		case "reddit.com": return new RedditRoute();
+
+		default: return null;
+	}
 }
 
-function checkHatefulDegree(){
-	
-}
+const route = route.run();
