@@ -7,4 +7,9 @@ function start(){
 		file: 'extension.js'
 	});
 });
+	checkHatefulDegree(new HateValue({ s }));
+}
+
+function checkHatefulDegree(){
+	
 }
