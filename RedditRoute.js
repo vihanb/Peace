@@ -6,6 +6,8 @@ import Comment from './Comment';
  */
 export default class RedditRoute extends Host {
 
+
+
     /** @override */
     shouldRunForPage(path) {
         return path.includes('comments/');
