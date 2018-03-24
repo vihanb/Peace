@@ -2,6 +2,11 @@ import Request, { HTTPMethod } from './Request';
 import HateValue from './HateValue';
 
 export default class RequestHateValue extends Request {
+
+    format(json) {
+        // Return HateValue
+    }
+
     constructor(text) {
         super({
             path: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21',
