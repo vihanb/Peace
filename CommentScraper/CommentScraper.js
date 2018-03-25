@@ -35,4 +35,4 @@ CommentScraper.shared = new CommentScraper();
  * @private
  */
 CommentScraper.hostRegex =
-    /^www\.|:\d+$jj/g;
+    /^www\.|:\d+$/g;
