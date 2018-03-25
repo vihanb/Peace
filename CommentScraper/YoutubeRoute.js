@@ -5,7 +5,8 @@ import Route from './Route'
  * Handles youtube.com.
  */
 export default class YoutubeRoute extends Route {
-    setupDynamicHooks() {
+    /*
+	setupDynamicHooks() {
         const observer = new MutationObserver((mutation) => {
             console.log(mutation);
             // this.handleComments(comments)
@@ -19,11 +20,27 @@ export default class YoutubeRoute extends Route {
             }
         );
     }
-
+	*/
+	/** @override */
+    shouldRunForPage(path) {
+        return path.includes('comments/');
+    }
     /** @override */
     getComments() {
         const comments = [];
-        const contents = document.getElementById('contents');
+		[...document.getElementsByClassName('entry')].map(
+            htmlComment => {
+                const text = htmlComment.getElementsByClassName('md')[0];
+                if (text) {
+                    comments.push(
+                        new Comment(htmlComment, text.textContent)
+                    );
+                }
+            }
+        );
+    }
+}
+        /*const contents = document.getElementById('contents');
         if (contents) {
             [...children].map(
                 htmlComment => {
@@ -45,3 +62,4 @@ export default class YoutubeRoute extends Route {
         return comments;
     }
 }
+*/
