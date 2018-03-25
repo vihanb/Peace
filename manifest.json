@@ -13,7 +13,7 @@
                 "<all_urls>"
             ],
             "js": ["extension.js"],
-						"css": ["peace-extension.css"]
+            "css": ["peace-extension.css"]
         }
     ],
     "icons": {
