@@ -10,7 +10,7 @@ export default class CommentScraper {
      * Gets an appropriate Host object based on the website name. If the website
      * is not supported, this method returns null.
      *
-     * @return {Host} The correct Host.
+     * @return {Host} The correct Host.6
      */
     getRoute() {
         // get the domain name
