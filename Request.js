@@ -30,13 +30,15 @@ export default class Request {
      * @return {Promise} resolves to format of object. See return type of
      * {@link Request#format}
      */
-    async get() {
+    async run() {
         let response = await axios.request({
             method: this._method,
             url: this._path,
 
             data: this._data,
-            headers: this._headers
+            params: this._params,
+            headers: this._headers,
+            auth: this._auth
         });
 
         return this.format(response.data);
@@ -56,6 +58,7 @@ export default class Request {
         auth,
         data,
         contentType,
+        params = {},
         headers = {},
         method = HTTPMethod.GET
     }) {
@@ -63,11 +66,12 @@ export default class Request {
         this._method = method;
 
         this._data = data;
+        this._params = params;
+        this._auth = auth;
 
         this._headers = {
             ...headers,
-            'Content-Type': contentType,
-            'Authorization': auth
+            'Content-Type': contentType
         }
     }
 }

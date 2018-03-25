@@ -1,4 +1,4 @@
-class HateValue {
+export default class HateValue {
     constructor({ summary, aggression, sarcasm }) {
         /**
          * 0-1 indicator summarizing how hateful a given comment is.
@@ -18,5 +18,5 @@ class HateValue {
          */
         this.sarcasm = sarcasm;
     }
-	
+
 }

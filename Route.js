@@ -1,4 +1,6 @@
-export default class Host {
+import RequestHateValue from './RequestHateValue';
+
+export default class Route {
     /**
      * Empty constructor to create host
      */
@@ -19,9 +21,15 @@ export default class Host {
      * Processes comments
      * @param {Comment[]} comments The comments
      */
-    handleComments(comments) {
+    async handleComments(comments) {
         for (let i = 0; i < comments.length; i++) {
+            const hateRequest = new RequestHateValue(comments[i].text);
+            const result = await hateRequest.run();
 
+            const normalizedResult = +result.toFixed(2);
+            if (normalizedResult > 0.5) {
+                comments[i].hide();
+            }
         }
     }
 

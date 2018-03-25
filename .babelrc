@@ -8,6 +8,7 @@
     ],
     "plugins": [
         "babel-plugin-syntax-jsx",
-        "babel-plugin-jsx-to-dom"
+        "babel-plugin-jsx-to-dom",
+        "babel-plugin-transform-object-rest-spread"
     ]
 }

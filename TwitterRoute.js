@@ -1,10 +1,10 @@
-import Host from './Host'
+import Route from './Route'
 import Comment from './Comment';
 
 /**
  * Handles twitter.com
  */
-export default class TwitterRoute extends Host {
+export default class TwitterRoute extends Route {
 
     /** @override */
     getComments() {

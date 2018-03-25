@@ -13,4 +13,4 @@ function getRoute() {
 	}
 }
 
-const route = getRoute().run();
+const route = getRoute().start();
