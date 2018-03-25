@@ -10,7 +10,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    z-index: 10000;
 }
 
 .peace-extension-warning .peace-extension-warning-header {
