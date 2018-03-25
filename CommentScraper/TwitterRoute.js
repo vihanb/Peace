@@ -1,8 +1,8 @@
-import Route from './Route'
 import Comment from './Comment';
+import Route from './Route';
 
 /**
- * Handles twitter.com
+ * Handles twitter.com.
  */
 export default class TwitterRoute extends Route {
 
@@ -19,5 +19,6 @@ export default class TwitterRoute extends Route {
                 }
             }
         );
+        return comments;
     }
 }

@@ -1,4 +1,4 @@
-import RequestHateValue from './RequestHateValue';
+import RequestHateValue from '../RequestHateValue';
 
 export default class Route {
     /**

@@ -2,7 +2,7 @@ import Route from './Route'
 import Comment from './Comment';
 
 /**
- * Handles reddit.com
+ * Handles reddit.com.
  */
 export default class RedditRoute extends Route {
 
