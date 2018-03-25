@@ -1,4 +1,5 @@
 import RequestHateValue from '../RequestHateValue';
+import HateValue from '../HateValue';
 
 export default class Route {
     /**
@@ -22,8 +23,13 @@ export default class Route {
      */
     async handleComments(comments) {
         for (let i = 0; i < comments.length; i++) {
-            const hateRequest = new RequestHateValue(comments[i].text);
-            const result = await hateRequest.run();
+            // const hateRequest = new RequestHateValue(comments[i].text);
+            // const result = await hateRequest.run();
+            const result = new HateValue({
+                summary: 1,
+                aggression: 1,
+                sarcasm: 1
+            });
 
             const normalizedResult = +result.summary.toFixed(2);
             if (normalizedResult >= 0.51) {
