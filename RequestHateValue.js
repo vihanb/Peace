@@ -43,8 +43,8 @@ export default class RequestHateValue extends Request {
             path: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone',
             method: HTTPMethod.GET,
             auth: {
-                username: '71ed1318-4e3d-44e4-8369-1af2ff7011b6',
-                password: 'Rv1S0VufTXOF'
+                username: '5390d368-3895-4a38-ba8a-51304a9ea624',
+                password: 'Hz4NVB3inkbX'
             },
             params: {
                 version: '2017-09-21',

@@ -6,16 +6,21 @@ import Route from './Route'
  */
 export default class YoutubeRoute extends Route {
     setupDynamicHooks() {
-        const observer = new MutationObserver((mutation) => {
-            console.log(mutation);
-            // this.handleComments(comments)
+        const observer = new MutationObserver((mutations) => {
+            for (let i = 0; i < mutations.length; i++) {
+                let mutation = mutations[i];
+                if (mutation.target.tagName === "YTD-COMMENTS") {
+                    console.log(mutation.target.children.slice());
+                }
+            }
         });
 
-        const main = document.getElementById('top');
+        const main = document.body;
         observer.observe(
             main,
             {
-                subtree: true
+                subtree: true,
+                childList: true
             }
         );
     }
