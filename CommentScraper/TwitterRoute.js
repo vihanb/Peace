@@ -9,12 +9,15 @@ export default class TwitterRoute extends Route {
     /** @override */
     getComments() {
         const comments = [];
-        [...document.getElementsByClassName('comment')].map(
-            htmlComment => {
-                const text = htmlComment.getElementsByClassName('tweet-text')[0];
+        [...document.getElementsByClassName('tweet')].map(htmlComment => {
+                const text = htmlComment
+                    .getElementsByClassName('content')[0]
+                    .getElementsByClassName('js-tweet-text-container')[0]
+                    .textContent;
+
                 if (text) {
                     comments.push(
-                        new Comment(htmlComment, text.textContent)
+                        new Comment(htmlComment, text)
                     );
                 }
             }
