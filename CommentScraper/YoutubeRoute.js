@@ -5,14 +5,10 @@ import Route from './Route'
  * Handles youtube.com.
  */
 export default class YoutubeRoute extends Route {
-    setupDynamicHooks() {
-        const observer = new MutationObserver((mutations) => {
-            for (let i = 0; i < mutations.length; i++) {
-                let mutation = mutations[i];
-                if (mutation.target.tagName === "YTD-COMMENTS") {
-                    console.log(mutation.target.children.slice());
-                }
-            }
+	setupDynamicHooks() {
+        const observer = new MutationObserver((mutation) => {
+            console.log(mutation);
+            // this.handleComments(comments)
         });
 
         const main = document.body;
@@ -25,10 +21,26 @@ export default class YoutubeRoute extends Route {
         );
     }
 
+	/** @override */
+    shouldRunForPage(path) {
+        return path.includes('comments/');
+    }
     /** @override */
     getComments() {
         const comments = [];
-        const contents = document.getElementById('contents');
+		[...document.getElementsByClassName("gstl_50 sbdd_a")].map(
+            htmlComment => {
+                const text = htmlComment.getElementsByClassName('md')[0];
+                if (text) {
+                    comments.push(
+                        new Comment(htmlComment, text.textContent)
+                    );
+                }
+            }
+        );
+    }
+}
+        /*const contents = document.getElementById('contents');
         if (contents) {
             [...children].map(
                 htmlComment => {
@@ -50,3 +62,4 @@ export default class YoutubeRoute extends Route {
         return comments;
     }
 }
+*/
