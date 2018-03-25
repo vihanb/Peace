@@ -1,5 +1,5 @@
 import Route from './Route'
-import Comment from './Comment';
+import Comment from '../Comment';
 
 /**
  * Handles reddit.com.
