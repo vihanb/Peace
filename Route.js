@@ -26,9 +26,9 @@ export default class Route {
             const hateRequest = new RequestHateValue(comments[i].text);
             const result = await hateRequest.run();
 
-            const normalizedResult = +result.toFixed(2);
+            const normalizedResult = +result.summary.toFixed(2);
             if (normalizedResult > 0.5) {
-                comments[i].hide();
+                comments[i].hide(normalizedResult);
             }
         }
     }
