@@ -1,4 +1,5 @@
-import Comment from  './Comment'
+import getTwitterComments from './getTwitterComments'
+import getYoutubeComments from './getYoutubeComments'
 
 /**
  * Scrapes the current tab for comments.
@@ -21,33 +22,13 @@ export default class CommentScraper {
         // dispatch to the right private method
         switch (website) {
         case "youtube.com":
-            return this.getYoutubeComments();
+            return getYoutubeComments();
         case "twitter.com":
-            return this.getTwitterComments();
+            return getTwitterComments();
         default:
             // unsupported
             return [];
         }
-    }
-
-    /**
-     * Scrapes a Youtube website for comments.
-     *
-     * @return {Comment[]} Youtube comments.
-     * @private
-     */
-    getYoutubeComments() {
-        return [];
-    }
-
-    /**
-     * Scrapes a Twitter website for comments.
-     *
-     * @return {Comment[]} Twitter comments.
-     * @private
-     */
-    getTwitterComments() {
-        return [];
     }
 
     /**

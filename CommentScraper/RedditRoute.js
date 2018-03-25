@@ -2,16 +2,20 @@ import Host from './Host'
 import Comment from './Comment';
 
 /**
- * Handles twitter.com
+ * Handles reddit.com.
  */
-export default class TwitterRoute extends Host {
+export default class RedditRoute extends Host {
+    /** @override */
+    shouldRunForPage(path) {
+        return path.includes('comments/');
+    }
 
     /** @override */
     getComments() {
         const comments = [];
-        [...document.getElementsByClassName('comment')].map(
+        [...document.getElementsByClassName('entry')].map(
             htmlComment => {
-                const text = htmlComment.getElementsByClassName('tweet-text')[0];
+                const text = htmlComment.getElementsByClassName('md')[0];
                 if (text) {
                     comments.push(
                         new Comment(htmlComment, text.textContent)
@@ -19,5 +23,6 @@ export default class TwitterRoute extends Host {
                 }
             }
         );
+        return comments;
     }
 }
