@@ -12,8 +12,7 @@ export default class Route {
     start() {
         if (this.shouldRunForPage(location.pathname)) {
             this.setupDynamicHooks();
-            const comments = this.getComments();
-            this.handleComments(comments);
+            this.handleComments(this.getComments());
         }
     }
 
@@ -27,7 +26,7 @@ export default class Route {
             const result = await hateRequest.run();
 
             const normalizedResult = +result.summary.toFixed(2);
-            if (normalizedResult > 0.5) {
+            if (normalizedResult >= 0.51) {
                 comments[i].hide(normalizedResult);
             }
         }

@@ -20,7 +20,7 @@ export default class Comment {
         const show = <span class="peace-extension-warning-btn">I understand, show me</span>;
         const hideMessage = (
             <div class="peace-extension-warning">
-                <span class="peace-extension-warning-header">This is hidden beacuse it has <span class="peace-extension-warning-percent">{score * 100}%</span> hate intensity.</span>
+                <span class="peace-extension-warning-header">This is hidden beacuse it has <span class="peace-extension-warning-percent">{(score * 100)|0}%</span> hate intensity.</span>
                 {show}
             </div>
         );
