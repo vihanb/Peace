@@ -3,7 +3,7 @@ function start(){
 	var htmlComments = document.getElementsByClassName("style-scope jtd-item-section-renderer);
 	var objs = [];
 	for(var i = 0; i < htmlComments.length; i++){
-		if(format(json) >= 0.6){
+		if(format(json) > 0.5){
 		<span id = "warningMessage">
 			"Are you sure you want to display this hateful comment?"
 		</span>
