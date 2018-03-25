@@ -1,8 +1,9 @@
-import getTwitterComments from './getTwitterComments'
-import getYoutubeComments from './getYoutubeComments'
+import RedditRoute from './RedditRoute'
+import TwitterRoute from './TwitterRoute'
+import YoutubeRoute from './YoutubeRoute'
 
 /**
- * Scrapes the current tab for comments.
+ * Uses website data to get a Route object.
  */
 export default class CommentScraper {
     /**
@@ -12,22 +13,25 @@ export default class CommentScraper {
     }
 
     /**
-     * Gets all the comments from the current website.
+     * Gets an appropriate Host object based on the website name. If the website
+     * is not supported, this method returns null.
      *
-     * @return {Comment[]} A list of comments.
+     * @return {Host} The correct Host.
      */
-    getComments() {
+    getRoute() {
         // determine the type of website
         const website = this.getWebsite();
         // dispatch to the right private method
         switch (website) {
-        case "youtube.com":
-            return getYoutubeComments();
+        case "reddit.com":
+            return new RedditRoute();
         case "twitter.com":
-            return getTwitterComments();
+            return new TwitterRoute();
+        case "youtube.com":
+            return new YoutubeRoute();
         default:
             // unsupported
-            return [];
+            return null;
         }
     }
 
@@ -70,4 +74,4 @@ export default class CommentScraper {
  * @private
  */
 CommentScraper.urlRegex =
-    /^(https?:\/\/)?(www\.)?(youtube\.com|twitter\.com)\//;
+    /^(https?:\/\/)?(www\.)?(reddit\.com|twitter\.com|youtube\.com)\//;
