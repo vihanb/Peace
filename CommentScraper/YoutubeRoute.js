@@ -28,7 +28,7 @@ export default class YoutubeRoute extends Route {
     /** @override */
     getComments() {
         const comments = [];
-		[...document.getElementsByClassName('entry')].map(
+		[...document.getElementsByClassName("gstl_50 sbdd_a")].map(
             htmlComment => {
                 const text = htmlComment.getElementsByClassName('md')[0];
                 if (text) {
